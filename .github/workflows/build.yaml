@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: macos-12
     steps:
       - uses: actions/checkout@v1
       - uses: graalvm/setup-graalvm@v1
@@ -21,5 +21,5 @@ jobs:
       - run: ./gradlew nativeCompile
       - uses: actions/upload-artifact@v3
         with:
-          name: allure-testops-utils-macos-13
+          name: allure-testops-utils-macos-12
           path: ./build/native/nativeCompile/allure-testops-utils
